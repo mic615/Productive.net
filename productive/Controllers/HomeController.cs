@@ -77,7 +77,7 @@ namespace productive.Controllers
                 dc.SaveChanges();
                 success = true;
             }
-            return new JsonResult { Data = new { status = success } };
+            return new JsonResult { Data = new { success = success } };
         }
 
         [HttpPost]
@@ -94,7 +94,7 @@ namespace productive.Controllers
                     success = true;
 
                 }
-                return new JsonResult { Data = new { status = success } };
+                return new JsonResult { Data = new { success = success } };
             }
         }
     }

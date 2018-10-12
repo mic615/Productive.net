@@ -35,7 +35,7 @@
                 <h4 class="modal-title">Save</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal">
+                <form class="col-md-12 form-horizontal">
                     <input type="hidden" id="hdEventID" value="0" />
                     <div class="form-group">
                         <label>Subject</label>
@@ -73,7 +73,7 @@
                             <option value="green">Green</option>
                         </select>
                     </div>
-                    <button type="button" id="btnSave" class="btn btn-success">Save</button>
+                    <button type="button" id="btnSave" class="btn btn-success" data-dismiss="modal">Save</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </form>
             </div>
@@ -255,7 +255,9 @@
                     Category: $('#txtCategory').val(),
                     ThemeColor:$('#ddThemeColor').val()
                 }
+               
                 SaveEvent(data);
+                
             })
 
             function SaveEvent(data) {
@@ -268,6 +270,7 @@
                             //Refresh the calendar
                             RenderCalendar();
                             $('#saveModal').modal('hide');
+                           
                         }
                     },
                     error: function () {
