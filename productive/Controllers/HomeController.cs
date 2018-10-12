@@ -30,6 +30,10 @@ namespace productive.Controllers
             var success = false;
             using (TasksEntities dc = new TasksEntities())
             {
+                if (task.Category == null)
+                {
+                    task.Category = " ";
+                }
                 if (task.EventID > 0)
                 {
                     //update all values in a task multipurpose for all save functions specify active or complete on js side 
