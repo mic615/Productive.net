@@ -45,14 +45,18 @@
                         <label>Start</label>
                         <div class="input-group date" id="dtp1">
                             <input type="text" id="txtStart" class="form-control" />
-                            <span class="glyphicon glyphicon-calendar"></span>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>End</label>
                         <div class="input-group date" id="dtp2">
                             <input type="text" id="txtEnd" class="form-control" />
-                            <span class="glyphicon glyphicon-calendar"></span>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -208,11 +212,11 @@
             })
 
             $('#dtp1').datetimepicker({
-                format: 'DD/MM/YYY HH:mm A'
+                format: 'DD/MM/YYYY HH:mm A'
             });
 
             $('#dtp2').datetimepicker({
-                format: 'DD/MM/YYY HH:mm A'
+                format: 'DD/MM/YYYY HH:mm A'
             });
 
             function openAddEditForm() {
